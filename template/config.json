@@ -1,0 +1,322 @@
+{
+  "event_id": "btl-demo-dallas-2026",
+  "event_name": "BTL Body & Mind Experience",
+  "event_tagline": "See the technology. Talk to the clinicians. Build your plan.",
+  "date": "2026-04-17",
+  "time_start": "17:30",
+  "time_end": "20:30",
+  "timezone": "America/Chicago",
+  "location": {
+    "venue": "The Adolphus Hotel",
+    "address": "1321 Commerce St",
+    "city": "Dallas",
+    "state": "TX",
+    "zip": "75202",
+    "maps_url": "https://maps.google.com/?q=The+Adolphus+Hotel+Dallas+TX"
+  },
+  "capacity": 75,
+  "registration_close_date": "2026-04-15",
+  "status": "active",
+  "proxy_base_url": "",
+  "ga4_measurement_id": "",
+  "base_url": "",
+
+  "demo_counts": {
+    "total": 47,
+    "chiro": 14,
+    "medspa": 9,
+    "derm": 6,
+    "plastic-surgery": 4,
+    "family-practice": 5,
+    "ortho": 3,
+    "cosmetic-dentist": 3,
+    "psychiatry": 3
+  },
+
+  "agenda": [
+    {
+      "time": "5:30 PM",
+      "title": "Check-in & Networking",
+      "description": "Complimentary drinks, hors d'oeuvres, and hands-on product stations"
+    },
+    {
+      "time": "6:15 PM",
+      "title": "Clinical Presentation",
+      "description": "Live demonstrations and published outcomes data for each platform"
+    },
+    {
+      "time": "7:00 PM",
+      "title": "Specialty Breakouts",
+      "description": "One-on-one time with clinical specialists and ROI modeling for your practice"
+    },
+    {
+      "time": "7:45 PM",
+      "title": "Q&A Panel",
+      "description": "Practicing physicians share their experience adding BTL to their clinic"
+    },
+    {
+      "time": "8:15 PM",
+      "title": "Wrap-up & Next Steps",
+      "description": "Personalized follow-up plan and exclusive event pricing"
+    }
+  ],
+
+  "speakers": [
+    {
+      "name": "Dr. Sarah Chen",
+      "title": "Medical Director, Aesthetic Medicine Associates",
+      "bio": "Board-certified dermatologist with 12 years of body contouring experience. Early adopter of Emsculpt Neo — will share her practice integration timeline and patient outcomes data."
+    },
+    {
+      "name": "Dr. James Park",
+      "title": "Owner, Peak Performance Chiropractic",
+      "bio": "Sports chiropractor who integrated Emsella and Emsculpt Neo into a cash-pay wellness program. Will cover patient selection, staff training, and the operational details of adding devices to an existing practice."
+    },
+    {
+      "name": "Marcus Williams",
+      "title": "Regional Clinical Director, BTL Industries",
+      "bio": "15 years in medical device implementation. Helps practices build treatment protocols and staff training programs for BTL platforms."
+    }
+  ],
+
+  "specialties": {
+    "chiro": {
+      "name": "Chiropractors",
+      "headline": "Add a cash-pay revenue stream to your chiropractic practice",
+      "subheadline": "Emsella and Emsculpt Neo bring a new patient demographic — women 35-65 — through your door for treatments insurance doesn't cover.",
+      "products": ["emsella", "emsculpt-neo"],
+      "testimonial": {
+        "quote": "We added Emsella six months ago. It's our highest-margin service and the patients are completely different from our adjustment patients. 80% are women who had never visited a chiropractor before.",
+        "author": "Dr. James Park",
+        "practice": "Peak Performance Chiropractic, Plano TX"
+      },
+      "talking_points": [
+        "Cash-pay model — no insurance billing headaches",
+        "Emsella treats urinary incontinence (68% improvement at 6 months)",
+        "Emsculpt Neo: 25% more muscle, 30% less fat in 30-minute sessions",
+        "Patients stay fully clothed during Emsella — zero procedure room setup",
+        "New patient demographic that cross-refers to your core services"
+      ]
+    },
+    "medspa": {
+      "name": "Medical Spas",
+      "headline": "The full aesthetics portfolio your clients already expect",
+      "subheadline": "Emface, Exion, Emsculpt Neo, and Emtone give you head-to-toe coverage from one manufacturer — body contouring, skin tightening, facial rejuvenation, and cellulite treatment.",
+      "products": ["emface", "exion", "emsculpt-neo", "emtone"],
+      "testimonial": {
+        "quote": "Our clients were asking for body contouring by name. Adding the BTL line meant we could say yes to everything — face, body, skin — without juggling four different vendor relationships.",
+        "author": "Dr. Sarah Chen",
+        "practice": "Aesthetic Medicine Associates, Dallas TX"
+      },
+      "talking_points": [
+        "Emface: 20-minute facial treatments, no needles, no downtime",
+        "Exion: microneedling RF + body contouring from one platform",
+        "Emsculpt Neo: HIFEM + RF — muscle and fat in one session",
+        "Emtone: RF + targeted pressure energy for cellulite",
+        "Single vendor relationship for service, training, and parts"
+      ]
+    },
+    "derm": {
+      "name": "Dermatologists",
+      "headline": "Expand beyond injectables — skin, cellulite, and facial contouring",
+      "subheadline": "Exion, Emtone, and Emface let you treat what fillers and toxins can't. Offer your patients comprehensive skin and body rejuvenation from the same chair.",
+      "products": ["exion", "emtone", "emface"],
+      "testimonial": {
+        "quote": "My Botox and filler patients kept asking about skin tightening and body work. Exion and Emface let me offer those treatments in-house instead of sending patients down the street.",
+        "author": "Dr. Lisa Nguyen",
+        "practice": "Dermatology & Skin Health, Fort Worth TX"
+      },
+      "talking_points": [
+        "Exion Clear RF: smart microablation for skin resurfacing",
+        "Exion Fractional RF: microneedling with real-time impedance monitoring",
+        "Emface: synchronized RF + HIFES for facial lifting and wrinkle reduction",
+        "Emtone: cellulite treatment your patients have been asking about",
+        "All treatments complement (not compete with) your injectable practice"
+      ]
+    },
+    "plastic-surgery": {
+      "name": "Plastic Surgeons",
+      "headline": "Non-surgical revenue between procedures",
+      "subheadline": "Emsculpt Neo and Emface serve the patients who want improvement but aren't ready for surgery — and the post-op patients who want to maintain results.",
+      "products": ["emsculpt-neo", "emface"],
+      "testimonial": {
+        "quote": "Emsculpt Neo fills the gap between consultation and procedure. Patients who aren't ready for lipo get real results — and 30% of them book surgery within a year.",
+        "author": "Dr. Michael Torres",
+        "practice": "Torres Plastic Surgery, Dallas TX"
+      },
+      "talking_points": [
+        "Emsculpt Neo: 25% muscle growth + 30% fat reduction, no anesthesia",
+        "Emface: non-invasive facial contouring for patients who want subtle improvement",
+        "Staff-administered — doesn't require physician time per treatment",
+        "Builds patient relationships during the pre-surgical consideration phase",
+        "87% patient satisfaction rate across published studies"
+      ]
+    },
+    "family-practice": {
+      "name": "Family Practitioners",
+      "headline": "A new revenue stream with minimal overhead and zero specialty training",
+      "subheadline": "Emsella and Emsculpt Neo are staff-administered, require no specialized certification, and address conditions your patients already mention — incontinence and core weakness.",
+      "products": ["emsella", "emsculpt-neo"],
+      "testimonial": {
+        "quote": "My nurses run the Emsella treatments between patient visits. We added it as a wellness service — no insurance coding required. It paid for itself in four months.",
+        "author": "Dr. Rachel Kim",
+        "practice": "Lakewood Family Medicine, Dallas TX"
+      },
+      "talking_points": [
+        "Emsella: patients stay fully clothed, 30-minute sessions, zero downtime",
+        "68% improvement in urinary incontinence at 6 months",
+        "Emsculpt Neo: 30-minute body contouring, FDA-cleared for 10 body areas",
+        "Staff-administered — MA or nurse operates the device",
+        "Cash-pay model fits alongside your insurance-based practice"
+      ]
+    },
+    "ortho": {
+      "name": "Orthopedic Surgeons",
+      "headline": "Pain management and muscle rehabilitation from one platform",
+      "subheadline": "Emvital targets joint and spine pain. Emsculpt Neo rebuilds muscle for post-surgical and post-injury patients. Together, they extend your treatment options beyond the OR.",
+      "products": ["emvital", "emsculpt-neo"],
+      "testimonial": {
+        "quote": "Post-knee replacement patients who did Emsculpt Neo recovered measurably faster. We tracked quad strength at 6 weeks — the treatment group was 35% ahead of controls.",
+        "author": "Dr. Robert Hayes",
+        "practice": "Texas Orthopedic & Sports Medicine, Dallas TX"
+      },
+      "talking_points": [
+        "Emvital: targeted pain relief and mobility improvement for joints and spine",
+        "Emsculpt Neo: muscle rebuilding for post-surgical rehabilitation",
+        "Published data: 25% increase in muscle mass in treated areas",
+        "Non-pharmacological pain management option for chronic patients",
+        "Complements physical therapy — accelerates recovery timelines"
+      ]
+    },
+    "cosmetic-dentist": {
+      "name": "Cosmetic Dentists",
+      "headline": "TMJ treatment and facial aesthetics — a natural extension of your dental practice",
+      "subheadline": "Emface is FDA-cleared for TMJ dysfunction and facial contouring. Your patients already trust you with their face. Now you can treat the muscles and skin around it.",
+      "products": ["emface"],
+      "testimonial": {
+        "quote": "Half my TMJ patients had tried everything — night guards, Botox, physical therapy. Emface gave them measurable relief, and they started referring friends for the aesthetic treatments.",
+        "author": "Dr. Amanda Price",
+        "practice": "Dallas Cosmetic & Family Dentistry, Dallas TX"
+      },
+      "talking_points": [
+        "FDA-cleared for TMJ dysfunction — treats the condition your patients already have",
+        "Facial contouring and wrinkle reduction without needles or downtime",
+        "20-minute sessions, 4 treatments — fits between dental appointments",
+        "Your patients already associate your practice with facial care",
+        "Cash-pay service that diversifies revenue beyond dental insurance"
+      ]
+    },
+    "psychiatry": {
+      "name": "Psychiatrists",
+      "headline": "FDA-cleared TMS for treatment-resistant depression — drug-free, under 30 minutes",
+      "subheadline": "EXOMIND uses patented ExoTMS technology to treat Major Depressive Disorder. Noninvasive, operator-independent, and produces results in as few as six sessions.",
+      "products": ["exomind"],
+      "testimonial": {
+        "quote": "For patients who've failed two or more medications, EXOMIND is the first thing that's worked. Six sessions in, I see changes in affect and engagement that medication adjustments never achieved.",
+        "author": "Dr. David Stern",
+        "practice": "North Texas Psychiatric Associates, Dallas TX"
+      },
+      "talking_points": [
+        "FDA-cleared for Major Depressive Disorder in adults",
+        "Patented ExoTMS (Transcranial Magnetic Stimulation) technology",
+        "Drug-free and noninvasive — walk-in, walk-out sessions under 30 minutes",
+        "Results in as few as six treatments",
+        "Operator-independent — staff can administer after brief training"
+      ]
+    }
+  },
+
+  "products": {
+    "emsculpt-neo": {
+      "name": "Emsculpt Neo",
+      "tagline": "Sculpting. Function. Wellness.",
+      "image": "../shared/assets/products/emsculpt-neo/hero.jpg",
+      "stats": ["25% more muscle", "30% less fat", "87% satisfaction", "30-min sessions"],
+      "description": "Simultaneous HIFEM + synchronized RF for muscle building and fat elimination. FDA-cleared for 10 body areas. 50+ publications supporting HIFEM technology."
+    },
+    "emsella": {
+      "name": "Emsella",
+      "tagline": "Pelvic Rehabilitation & Restoration",
+      "image": "../shared/assets/products/emsella/hero.png",
+      "stats": ["68% improvement", "87% report less pad use", "30-min sessions", "Fully clothed"],
+      "description": "HIFEM technology for pelvic floor rehabilitation. 3x more effective than electrical muscle stimulation. Six treatments, no downtime, patients remain fully clothed."
+    },
+    "emface": {
+      "name": "Emface",
+      "tagline": "Function & Aesthetics",
+      "image": "../shared/assets/products/emface/hero.jpg",
+      "stats": ["20-min sessions", "No needles", "FDA-cleared", "No downtime"],
+      "description": "Synchronized RF + HIFES muscle stimulation for facial contouring and wrinkle reduction. FDA-cleared for wrinkles, TMJ dysfunction, and submental laxity."
+    },
+    "exion": {
+      "name": "Exion",
+      "tagline": "The BTL Multiplatform",
+      "image": "../shared/assets/products/exion/hero.png",
+      "stats": ["4 modalities", "Head-to-toe", "Smart RF", "One platform"],
+      "description": "Clear RF (smart microablation), Fractional RF (microneedling), Face (RF + HA stimulation), and Body (contouring). Head-to-toe coverage from one platform."
+    },
+    "emtone": {
+      "name": "Emtone",
+      "tagline": "Toned. Not Textured.",
+      "image": "../shared/assets/products/emtone/hero.png",
+      "stats": ["RF + pressure", "20-min sessions", "4 treatments", "Cellulite focus"],
+      "description": "RF + targeted pressure energy for cellulite reduction. Similar to a hot stone massage with intense mechanical vibrations. Four treatments, 20 minutes each."
+    },
+    "emvital": {
+      "name": "Emvital",
+      "tagline": "Stop Pain, Start Relief",
+      "image": "../shared/assets/products/emvital/hero.jpg",
+      "stats": ["Pain relief", "Mobility", "Joints & spine", "Non-pharma"],
+      "description": "Pain management, mobility improvement, and injury treatment. Targets joints and spine specialists, pain management centers."
+    },
+    "exomind": {
+      "name": "EXOMIND",
+      "tagline": "Strengthen Your Mind",
+      "image": "../shared/assets/products/exomind/hero.jpg",
+      "stats": ["FDA-cleared", "Drug-free", "Under 30 min", "6 treatments"],
+      "description": "Patented ExoTMS technology (Transcranial Magnetic Stimulation) for Major Depressive Disorder. Noninvasive, operator-independent, walk-in and walk-out sessions."
+    }
+  },
+
+  "faq": [
+    {
+      "question": "Will there be pressure to buy something at this event?",
+      "answer": "No. There are no contracts, deposits, or purchase commitments at the event. You'll see clinical data, try the devices, and talk to physicians who use them. If you want to explore further, your BTL rep will schedule a separate follow-up at your practice on your timeline."
+    },
+    {
+      "question": "Do I need to hire additional staff to operate BTL devices?",
+      "answer": "Most practices use existing clinical staff. BTL devices are designed to be operator-independent — your MAs, nurses, or techs can run treatments after a brief training program included with every device. You don't need a physician present for each session."
+    },
+    {
+      "question": "What does the financing look like?",
+      "answer": "BTL offers several financing structures and your rep will walk through the options at a follow-up meeting. At the event, the clinical specialists will help you model patient volume and pricing for your market so you can evaluate break-even timelines before any financial conversation."
+    },
+    {
+      "question": "Who else will be there — practice owners or sales reps?",
+      "answer": "Practice owners, medical directors, and office managers. The event is capped at 75 to keep it intimate. You'll be in a room with other local practitioners evaluating the same decision, plus practicing physicians who already run BTL devices."
+    },
+    {
+      "question": "Which of my current patients are candidates for these treatments?",
+      "answer": "That depends on your specialty and the device — the speakers will cover patient selection criteria for each platform. Broadly: Emsculpt Neo and Emtone serve body contouring patients, Emsella targets pelvic health (women 35-65 especially), Emface covers facial aesthetics and TMJ, and EXOMIND treats depression. Your specialty page has more detail."
+    },
+    {
+      "question": "I've been to device dinners before. Why is this one different?",
+      "answer": "Three things. First, practicing physicians present — people running BTL devices in clinics like yours, sharing real revenue numbers. Second, you get hands-on time with every device, not just a slide deck. Third, a BTL clinical specialist will build a custom ROI model for your practice based on your patient volume and market rates."
+    },
+    {
+      "question": "Can I bring my office manager or a colleague?",
+      "answer": "Yes — and you should, especially if they handle equipment decisions or patient scheduling. Each person needs their own registration for capacity planning. After you register, you'll get a share link to send them."
+    },
+    {
+      "question": "What if I register but can't make it?",
+      "answer": "No problem. We'll schedule a private demonstration at your practice instead, or connect you with the next event in your area."
+    }
+  ],
+
+  "post_event": {
+    "enabled": false,
+    "lead_magnet_title": "BTL Practice Integration Guide",
+    "lead_magnet_description": "A 12-page guide covering device selection, treatment room setup, staff training timelines, patient pricing strategies, and first-year ROI projections for each BTL platform.",
+    "lead_magnet_file": ""
+  }
+}

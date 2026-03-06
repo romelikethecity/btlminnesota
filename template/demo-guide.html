@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTL Events — Demo Walkthrough</title>
+  <link rel="icon" type="image/png" href="../shared/assets/btl-icon-blue.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/styles.css?v=2">
+  <style>
+    .demo-hero {
+      background: var(--gray-900);
+      color: var(--btl-white);
+      padding: var(--space-3xl) 0;
+      text-align: center;
+    }
+    .demo-hero h1 { color: var(--btl-white); font-size: var(--font-size-3xl); }
+    .demo-hero p { opacity: 0.7; max-width: 600px; margin: var(--space-sm) auto 0; }
+    .demo-badge {
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      background: rgba(0,100,152,0.2);
+      color: var(--btl-accent);
+      border: 1px solid rgba(0,100,152,0.3);
+      border-radius: 100px;
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      margin-bottom: var(--space-lg);
+    }
+    .demo-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    @media (min-width: 640px) { .demo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .demo-card {
+      background: var(--btl-white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      transition: box-shadow var(--transition-base);
+    }
+    .demo-card:hover { box-shadow: var(--shadow-lg); }
+    .demo-card__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--btl-primary);
+      color: var(--btl-white);
+      border-radius: 50%;
+      font-size: var(--font-size-sm);
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+    }
+    .demo-card h3 { margin-bottom: var(--space-sm); font-size: var(--font-size-lg); }
+    .demo-card p { font-size: var(--font-size-sm); color: var(--gray-600); margin-bottom: var(--space-md); }
+    .demo-card a { font-weight: 500; }
+    .demo-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-top: var(--space-sm);
+    }
+    .demo-links a {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      background: var(--btl-light-bg);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-xs);
+      font-weight: 500;
+    }
+    .demo-section { padding: var(--space-3xl) 0; }
+    .demo-section h2 { margin-bottom: var(--space-sm); }
+    .demo-section > .container > p { color: var(--gray-600); max-width: 600px; }
+    .demo-url-box {
+      background: var(--gray-900);
+      color: #4ade80;
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--radius-sm);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: var(--font-size-xs);
+      overflow-x: auto;
+      white-space: nowrap;
+      margin: var(--space-md) 0;
+    }
+    .demo-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--font-size-sm);
+      margin-top: var(--space-lg);
+    }
+    .demo-table th, .demo-table td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .demo-table th {
+      font-weight: 600;
+      color: var(--gray-700);
+      background: var(--gray-50);
+    }
+    .demo-table td { color: var(--gray-600); }
+    .demo-table code {
+      background: var(--btl-light-bg);
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+      font-size: var(--font-size-xs);
+    }
+    /* Analytics section */
+    .analytics-kpis {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+      margin: var(--space-xl) 0;
+    }
+    @media (min-width: 640px) { .analytics-kpis { grid-template-columns: repeat(4, 1fr); } }
+    .kpi-card {
+      background: var(--btl-white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      text-align: center;
+    }
+    .kpi-card__value {
+      font-size: var(--font-size-2xl);
+      font-weight: 700;
+      color: var(--gray-900);
+      line-height: 1;
+    }
+    .kpi-card__value--green { color: #16a34a; }
+    .kpi-card__value--blue { color: var(--btl-primary); }
+    .kpi-card__label {
+      font-size: var(--font-size-xs);
+      color: var(--gray-500);
+      margin-top: 0.4rem;
+      font-weight: 500;
+    }
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+    @media (min-width: 768px) { .analytics-grid { grid-template-columns: 1fr 1fr; } }
+    .analytics-panel {
+      background: var(--btl-white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+    }
+    .analytics-panel h3 {
+      font-size: var(--font-size-base);
+      margin-bottom: var(--space-md);
+      color: var(--gray-900);
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: 0.6rem;
+      font-size: var(--font-size-sm);
+    }
+    .bar-row__label {
+      width: 120px;
+      flex-shrink: 0;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+    .bar-row__track {
+      flex: 1;
+      height: 22px;
+      background: var(--gray-100);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bar-row__fill {
+      height: 100%;
+      background: var(--btl-primary);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding-left: 0.5rem;
+      font-size: var(--font-size-xs);
+      color: var(--btl-white);
+      font-weight: 600;
+      min-width: 28px;
+    }
+    .bar-row__fill--green { background: #16a34a; }
+    .bar-row__fill--amber { background: #d97706; }
+    .pipeline-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: var(--font-size-sm);
+    }
+    .pipeline-row:last-child { border-bottom: none; }
+    .pipeline-row__label { color: var(--gray-600); }
+    .pipeline-row__value { font-weight: 600; color: var(--gray-900); }
+    .pipeline-row__value--highlight { color: #16a34a; }
+    .sample-label {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      background: var(--gray-100);
+      color: var(--gray-500);
+      border-radius: 3px;
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: var(--space-md);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="demo-hero">
+    <div class="container">
+      <div class="demo-badge">Internal Demo — Not for Distribution</div>
+      <h1>BTL Event Registration System</h1>
+      <p>A reusable event registration template that drives registrations, reduces no-shows, and scales across any BTL region. This walkthrough covers every feature.</p>
+    </div>
+  </section>
+
+  <!-- Feature Walkthrough -->
+  <section class="demo-section">
+    <div class="container">
+      <h2>Feature walkthrough</h2>
+      <p>Click through each feature in order. The full registration flow takes about 60 seconds.</p>
+
+      <div class="demo-grid">
+
+        <!-- 1. Main Landing Page -->
+        <div class="demo-card">
+          <div class="demo-card__number">1</div>
+          <h3>Main Landing Page</h3>
+          <p>Value-driven hero with verifiable BTL stats ($200K+ avg annual revenue, 87% satisfaction, 30-min sessions). Credibility strip, ROI section, agenda, speakers, and FAQ — all customized per event and region.</p>
+          <a href="index.html" class="btn btn--primary btn--sm">Open Main Page</a>
+        </div>
+
+        <!-- 2. Specialty Pages -->
+        <div class="demo-card">
+          <div class="demo-card__number">2</div>
+          <h3>8 Specialty Pages</h3>
+          <p>Each specialty gets its own landing page with targeted headline, relevant products, matching testimonial, and specialty-specific talking points. Same structure, different message.</p>
+          <div class="demo-links">
+            <a href="specialty/chiro.html">Chiro</a>
+            <a href="specialty/medspa.html">Med Spa</a>
+            <a href="specialty/derm.html">Derm</a>
+            <a href="specialty/plastic-surgery.html">Plastic Surgery</a>
+            <a href="specialty/family-practice.html">Family Practice</a>
+            <a href="specialty/ortho.html">Ortho</a>
+            <a href="specialty/cosmetic-dentist.html">Cosmetic Dentist</a>
+            <a href="specialty/psychiatry.html">Psychiatry</a>
+          </div>
+        </div>
+
+        <!-- 3. Pre-fill from URL -->
+        <div class="demo-card">
+          <div class="demo-card__number">3</div>
+          <h3>URL Pre-fill</h3>
+          <p>Every registration link can include the physician's name, email, and practice. One click, the form is already filled — just hit submit. We generate these from your CRM export.</p>
+          <a href="specialty/chiro.html?first=Sarah&last=Mitchell&email=sarah@mitchellchiro.com&practice=Mitchell+Chiropractic" class="btn btn--primary btn--sm">Try Pre-filled Link</a>
+          <div class="demo-url-box">specialty/chiro.html?first=Sarah&last=Mitchell&email=sarah@mitchellchiro.com&practice=Mitchell+Chiropractic</div>
+        </div>
+
+        <!-- 4. Registration → Confirmation Flow -->
+        <div class="demo-card">
+          <div class="demo-card__number">4</div>
+          <h3>Submit → Confirmation</h3>
+          <p>Submit any form (mock — no real backend yet). You'll see the confirmation page with personalized greeting, event details, and next steps.</p>
+          <a href="index.html#register" class="btn btn--primary btn--sm">Go to Form</a>
+        </div>
+
+        <!-- 5. Calendar -->
+        <div class="demo-card">
+          <div class="demo-card__number">5</div>
+          <h3>Calendar Integration</h3>
+          <p>After registration, the confirmation page offers Google Calendar and .ics download. Timezone-aware, includes 1-day and 2-hour reminders. Reduces no-shows.</p>
+          <p class="text-xs text-muted">Available on the confirmation page after submitting a form.</p>
+        </div>
+
+        <!-- 6. Referral Share -->
+        <div class="demo-card">
+          <div class="demo-card__number">6</div>
+          <h3>Referral Sharing</h3>
+          <p>Each registrant gets a unique referral URL. Copy button, email, SMS, and native share (mobile). Referred registrations are tracked — every attendee recruits more attendees.</p>
+          <p class="text-xs text-muted">Available on the confirmation page after submitting a form.</p>
+        </div>
+
+        <!-- 7. Social Proof + Scarcity -->
+        <div class="demo-card">
+          <div class="demo-card__number">7</div>
+          <h3>Social Proof + Scarcity</h3>
+          <p>"47 providers already registered" (main) / "14 chiropractors already registered" (specialty). Capacity meter shows spots remaining. Counts update from config for demo, from API in production.</p>
+          <p class="text-xs text-muted">Visible on the main page and specialty pages when thresholds are met.</p>
+        </div>
+
+        <!-- 8. Exit Intent -->
+        <div class="demo-card">
+          <div class="demo-card__number">8</div>
+          <h3>Exit Intent + Sticky CTA</h3>
+          <p>Desktop: overlay triggers when cursor moves toward the browser close area, or after 45 seconds of inactivity. Mobile: sticky CTA bar appears at 60% scroll depth. Only fires once per session, only for unregistered visitors.</p>
+          <p class="text-xs text-muted">Wait 45 seconds on any page, or move your cursor toward the top of the browser.</p>
+        </div>
+
+        <!-- 9. Post-Event Mode -->
+        <div class="demo-card">
+          <div class="demo-card__number">9</div>
+          <h3>Post-Event Mode</h3>
+          <p>After the event: registration form hides, replaced by a lead magnet download CTA. One config toggle flips every page. Add <code>?post=true</code> to any URL to preview it.</p>
+          <a href="index.html?post=true" class="btn btn--secondary btn--sm">Preview Post-Event</a>
+        </div>
+
+        <!-- 10. Data Sync -->
+        <div class="demo-card">
+          <div class="demo-card__number">10</div>
+          <h3>Registrant Data Pipeline</h3>
+          <p>Every registration syncs to our master database. We match registrants to existing contacts, flag new prospects, and track who actually attends. Post-event, you get a full report: who registered, who showed, who's a new lead, and who's ready for follow-up.</p>
+          <p class="text-xs text-muted">Automated sync — no manual CSV exports or CRM imports.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Analytics -->
+  <section class="demo-section" style="background:var(--btl-light-bg);">
+    <div class="container">
+      <div class="sample-label">POTENTIAL ADD-ON</div>
+      <h2>Post-event analytics</h2>
+      <p>An optional reporting layer we can build on top of the registration system. Here's what a typical event report could look like.</p>
+
+      <!-- KPI row -->
+      <div class="analytics-kpis">
+        <div class="kpi-card">
+          <div class="kpi-card__value">68</div>
+          <div class="kpi-card__label">Registered</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-card__value kpi-card__value--green">59</div>
+          <div class="kpi-card__label">Attended (87%)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-card__value kpi-card__value--blue">23</div>
+          <div class="kpi-card__label">Net-new contacts</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-card__value">14</div>
+          <div class="kpi-card__label">Requested follow-up</div>
+        </div>
+      </div>
+
+      <!-- Detail panels -->
+      <div class="analytics-grid">
+
+        <!-- Registrations by specialty -->
+        <div class="analytics-panel">
+          <h3>Registrations by specialty</h3>
+          <div class="bar-row">
+            <span class="bar-row__label">Chiropractic</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:100%">18</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Med Spa</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:78%">14</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Dermatology</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:50%">9</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Plastic Surgery</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:44%">8</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Family Practice</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:39%">7</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Ortho</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:33%">6</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Cosmetic Dentist</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:22%">4</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Psychiatry</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:11%">2</div></div>
+          </div>
+        </div>
+
+        <!-- Channel performance -->
+        <div class="analytics-panel">
+          <h3>How they found us</h3>
+          <div class="bar-row">
+            <span class="bar-row__label">Personal link</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:100%">38</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Referral</span>
+            <div class="bar-row__track"><div class="bar-row__fill bar-row__fill--green" style="width:32%">12</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Direct / organic</span>
+            <div class="bar-row__track"><div class="bar-row__fill bar-row__fill--amber" style="width:26%">10</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Social</span>
+            <div class="bar-row__track"><div class="bar-row__fill bar-row__fill--amber" style="width:21%">8</div></div>
+          </div>
+
+          <div style="margin-top:var(--space-lg); padding-top:var(--space-md); border-top:1px solid var(--gray-200);">
+            <h3 style="margin-bottom:var(--space-sm);">Top referrers</h3>
+            <div class="pipeline-row">
+              <span class="pipeline-row__label">Dr. Sarah Mitchell</span>
+              <span class="pipeline-row__value">4 referrals</span>
+            </div>
+            <div class="pipeline-row">
+              <span class="pipeline-row__label">Dr. James Patel</span>
+              <span class="pipeline-row__value">3 referrals</span>
+            </div>
+            <div class="pipeline-row">
+              <span class="pipeline-row__label">Dr. Lisa Chen</span>
+              <span class="pipeline-row__value">2 referrals</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pipeline / follow-up -->
+        <div class="analytics-panel">
+          <h3>Sales pipeline</h3>
+          <div class="pipeline-row">
+            <span class="pipeline-row__label">Registered</span>
+            <span class="pipeline-row__value">68</span>
+          </div>
+          <div class="pipeline-row">
+            <span class="pipeline-row__label">Attended</span>
+            <span class="pipeline-row__value">59</span>
+          </div>
+          <div class="pipeline-row">
+            <span class="pipeline-row__label">Requested follow-up demo</span>
+            <span class="pipeline-row__value pipeline-row__value--highlight">14</span>
+          </div>
+          <div class="pipeline-row">
+            <span class="pipeline-row__label">Already in CRM</span>
+            <span class="pipeline-row__value">45</span>
+          </div>
+          <div class="pipeline-row">
+            <span class="pipeline-row__label">Net-new contacts added</span>
+            <span class="pipeline-row__value pipeline-row__value--highlight">23</span>
+          </div>
+          <div class="pipeline-row">
+            <span class="pipeline-row__label">Registered but didn't attend</span>
+            <span class="pipeline-row__value">9</span>
+          </div>
+        </div>
+
+        <!-- Rep performance -->
+        <div class="analytics-panel">
+          <h3>Rep territory performance</h3>
+          <div class="bar-row">
+            <span class="bar-row__label">Mike Torres</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:100%">22</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Amanda Reyes</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:77%">17</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Kevin Cho</span>
+            <div class="bar-row__track"><div class="bar-row__fill" style="width:59%">13</div></div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-row__label">Direct / no rep</span>
+            <div class="bar-row__track"><div class="bar-row__fill bar-row__fill--amber" style="width:73%">16</div></div>
+          </div>
+
+          <div style="margin-top:var(--space-lg); padding-top:var(--space-md); border-top:1px solid var(--gray-200);">
+            <h3 style="margin-bottom:var(--space-sm);">Avg. time to register</h3>
+            <div class="pipeline-row">
+              <span class="pipeline-row__label">From personalized link sent</span>
+              <span class="pipeline-row__value">2.3 days</span>
+            </div>
+            <div class="pipeline-row">
+              <span class="pipeline-row__label">From referral link shared</span>
+              <span class="pipeline-row__value pipeline-row__value--highlight">0.8 days</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Revenue Model -->
+  <section class="demo-section">
+    <div class="container container--narrow">
+      <h2>Revenue model</h2>
+      <p>We build and maintain the registration system for free. BTL pays per registrant.</p>
+
+      <div style="margin-top:var(--space-xl);">
+        <table class="demo-table">
+          <tbody>
+            <tr>
+              <td><strong>Cost to BTL</strong></td>
+              <td>$100 per registrant</td>
+            </tr>
+            <tr>
+              <td><strong>What BTL gets</strong></td>
+              <td>Custom branded registration, pre-filled URLs from CRM, specialty-targeted pages, referral engine, calendar reminders, post-event lead capture, attendance tracking</td>
+            </tr>
+            <tr>
+              <td><strong>What we handle</strong></td>
+              <td>Template setup, event duplication, URL generation, registrant-to-database sync, attendance tracking, post-event follow-up lists, analytics, ongoing maintenance</td>
+            </tr>
+            <tr>
+              <td><strong>Timeline</strong></td>
+              <td>Phase B (production) ready in 1 week after approval</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Built by Verum Data Services</p>
+      <p class="text-xs" style="margin-top:var(--space-sm);opacity:0.5;">Internal demo — not for distribution</p>
+    </div>
+  </footer>
+
+</body>
+</html>
