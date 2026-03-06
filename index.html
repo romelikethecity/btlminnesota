@@ -345,6 +345,23 @@
     document.addEventListener('btl:config-ready', () => {
       BTLEvents.hydrateSpecialtyNav();
     });
+
+    // Pre-fill form from URL params
+    (function() {
+      const p = new URLSearchParams(window.location.search);
+      const map = {fn:'first_name', ln:'last_name', email:'email', practice:'practice', phone:'phone', specialty:'specialty'};
+      Object.entries(map).forEach(([param, field]) => {
+        const val = p.get(param);
+        if (val) {
+          const el = document.getElementById(field) || document.querySelector(`[name="${field}"]`);
+          if (el) el.value = val;
+        }
+      });
+      // Auto-scroll to form if prefilled
+      if (p.get('fn') || p.get('email')) {
+        setTimeout(() => document.getElementById('register')?.scrollIntoView({behavior:'smooth'}), 500);
+      }
+    })();
   </script>
 
 </body>
