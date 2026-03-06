@@ -2,6 +2,8 @@
   "event_id": "btl-detroit-2026",
   "event_name": "BTL Body & Mind Experience — Detroit",
   "event_tagline": "Harvard faculty, hands-on device demos, and a revenue plan tailored to your practice.",
+  "hero_headline": "Grow Your Practice. We'll Show You How.",
+  "hero_tagline": "Harvard faculty, hands-on device demos, and a revenue plan tailored to your practice.",
   "event_description": "A full-day clinical education event with Harvard faculty, hands-on device demos, a personalized revenue workshop, and an evening cocktail party with DJ.",
   "date": "2026-03-21",
   "time_start": "09:00",
@@ -23,6 +25,7 @@
   "base_url": "https://btlmichigan.com",
 
   "demo_counts": {
+    "capacity": 75,
     "total": 0,
     "chiro": 0,
     "medspa": 0,

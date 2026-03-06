@@ -27,8 +27,8 @@
        Visual (product), Social Proof, CTA
        ============================================ -->
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero — drop hero-bg.jpg into events/detroit/assets/ to activate background image -->
+  <section class="hero" style="background-image:linear-gradient(rgba(0,50,76,0.85),rgba(0,50,76,0.92)),url('assets/hero-bg.jpg');background-size:cover;background-position:center;">
     <div class="container">
       <div class="social-proof social-proof--hero" data-social-proof="hero" hidden></div>
 
@@ -100,17 +100,23 @@
       <h2 class="text-center" style="margin-bottom:var(--space-xl);">What to Expect</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-xl);text-align:center;">
         <div>
-          <div style="font-size:2.5rem;margin-bottom:var(--space-sm);">&#9728;&#65039;</div>
+          <div style="margin-bottom:var(--space-sm);">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--btl-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
           <h3 style="color:var(--btl-primary);margin-bottom:var(--space-xs);font-size:1.25rem;">Morning &mdash; Learn</h3>
           <p class="text-muted" style="font-size:0.95rem;">Harvard Key Opinion Leader keynote, specialty breakout sessions, and hands-on time with every device.</p>
         </div>
         <div>
-          <div style="font-size:2.5rem;margin-bottom:var(--space-sm);">&#128736;&#65039;</div>
+          <div style="margin-bottom:var(--space-sm);">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--btl-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
           <h3 style="color:var(--btl-primary);margin-bottom:var(--space-xs);font-size:1.25rem;">Afternoon &mdash; Build</h3>
           <p class="text-muted" style="font-size:0.95rem;">Revenue workshop, one-on-one ROI modeling, and a launch plan customized for your practice.</p>
         </div>
         <div>
-          <div style="font-size:2.5rem;margin-bottom:var(--space-sm);">&#127878;</div>
+          <div style="margin-bottom:var(--space-sm);">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--btl-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 005-5c0-2-.5-4-1-6H8c-.5 2-1 4-1 6a5 5 0 005 5z"/></svg>
+          </div>
           <h3 style="color:var(--btl-primary);margin-bottom:var(--space-xs);font-size:1.25rem;">Evening &mdash; Celebrate</h3>
           <p class="text-muted" style="font-size:0.95rem;">Cocktail hour, sit-down dinner, and a DJ party at the Westin Book Cadillac until midnight.</p>
         </div>

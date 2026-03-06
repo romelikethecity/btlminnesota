@@ -82,8 +82,8 @@ const BTLEvents = (() => {
       setText('[data-hero-headline]', spec.headline);
       setText('[data-hero-subheadline]', spec.subheadline);
     } else {
-      setText('[data-hero-headline]', config.event_name);
-      setText('[data-hero-subheadline]', config.event_tagline);
+      setText('[data-hero-headline]', config.hero_headline || config.event_name);
+      setText('[data-hero-subheadline]', config.hero_tagline || config.event_tagline);
     }
   }
 
