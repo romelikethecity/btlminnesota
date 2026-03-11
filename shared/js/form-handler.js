@@ -106,7 +106,7 @@
       submitBtn.textContent = 'Registering...';
 
       // Submit to Google Sheets
-      const SHEETS_URL = 'PLACEHOLDER_SHEETS_URL'; // Replace with MN Apps Script URL
+      const SHEETS_URL = 'https://script.google.com/macros/s/AKfycby3CiIoljz1ZahfqmejJDwgAVb_MMjKO0G3sndAEQMKXlzeO6kyjz7ggnIqbi9PdTtn7A/exec';
       try {
         const resp = await fetch(SHEETS_URL, {
           method: 'POST',
