@@ -1,6 +1,6 @@
-prefill-links.csv
-*.pyc
-__pycache__/
-.DS_Store
-scripts/
+.wrangler/
 data/
+scripts/
+node_modules/
+*.csv
+.DS_Store
