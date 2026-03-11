@@ -9,47 +9,71 @@
     initFormSubmit(config);
   });
 
-  /** Pre-fill form fields from URL params */
-  function initPreFill() {
+  /** Pre-fill form fields from URL params or short code lookup */
+  async function initPreFill() {
     const params = new URLSearchParams(window.location.search);
-    const fieldMap = {
-      'first': 'first_name',
-      'last': 'last_name',
-      'email': 'email',
-      'practice': 'practice',
-      'phone': 'phone',
-    };
+    const code = params.get('c');
 
-    Object.entries(fieldMap).forEach(([param, field]) => {
-      const val = params.get(param);
-      if (val) {
-        const input = document.querySelector(`input[name="${field}"]`);
-        if (input) input.value = val;
+    if (code) {
+      // Short URL lookup via Cloudflare Worker
+      const LOOKUP_URL = 'https://btl-contact-lookup.rome-workers.workers.dev';
+      try {
+        const resp = await fetch(`${LOOKUP_URL}?c=${encodeURIComponent(code)}`);
+        const data = await resp.json();
+        if (data.success) {
+          fillField('first_name', data.first);
+          fillField('last_name', data.last);
+          fillField('email', data.email);
+          fillField('practice', data.practice);
+          fillField('phone', data.phone);
+          if (data.specialty) fillField('specialty', data.specialty);
+          setTimeout(() => document.getElementById('register')?.scrollIntoView({behavior:'smooth'}), 500);
+        }
+      } catch (err) {
+        console.warn('Contact lookup failed:', err);
       }
-    });
+    } else {
+      // Existing param-based pre-fill (backward compatible)
+      const fieldMap = {
+        'first': 'first_name',
+        'fn': 'first_name',
+        'last': 'last_name',
+        'ln': 'last_name',
+        'email': 'email',
+        'practice': 'practice',
+        'phone': 'phone',
+      };
 
-    // Specialty from URL overrides page default
-    const specParam = params.get('specialty');
-    if (specParam) {
-      const specInput = document.querySelector('input[name="specialty"]');
-      if (specInput) specInput.value = specParam;
+      Object.entries(fieldMap).forEach(([param, field]) => {
+        const val = params.get(param);
+        if (val) fillField(field, val);
+      });
+
+      // Specialty from URL overrides page default
+      const specParam = params.get('specialty');
+      if (specParam) fillField('specialty', specParam);
+
+      // Auto-scroll if pre-filled
+      if (params.get('fn') || params.get('first') || params.get('email')) {
+        setTimeout(() => document.getElementById('register')?.scrollIntoView({behavior:'smooth'}), 500);
+      }
     }
 
     // Store referral code
     const ref = params.get('ref');
-    if (ref) {
-      const refInput = document.querySelector('input[name="referred_by"]');
-      if (refInput) refInput.value = ref;
-    }
+    if (ref) fillField('referred_by', ref);
 
     // Store UTM params
     ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(utm => {
       const val = params.get(utm);
-      if (val) {
-        const input = document.querySelector(`input[name="${utm}"]`);
-        if (input) input.value = val;
-      }
+      if (val) fillField(utm, val);
     });
+  }
+
+  function fillField(name, value) {
+    if (!value) return;
+    const input = document.querySelector(`input[name="${name}"]`);
+    if (input) input.value = value;
   }
 
   /** Setup form submit handler */
