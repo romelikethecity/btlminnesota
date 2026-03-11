@@ -27,15 +27,15 @@
 
   "demo_counts": {
     "capacity": 75,
-    "total": 0,
-    "chiro": 0,
-    "medspa": 0,
-    "derm": 0,
-    "plastic-surgery": 0,
-    "family-practice": 0,
-    "ortho": 0,
-    "cosmetic-dentist": 0,
-    "psychiatry": 0
+    "total": 47,
+    "chiro": 9,
+    "medspa": 11,
+    "derm": 6,
+    "plastic-surgery": 5,
+    "family-practice": 7,
+    "ortho": 4,
+    "cosmetic-dentist": 3,
+    "psychiatry": 2
   },
 
   "agenda": [
