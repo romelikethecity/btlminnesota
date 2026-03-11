@@ -1,77 +1,78 @@
 {
-  "event_id": "btl-detroit-2026",
-  "event_name": "BTL Body & Mind Experience — Detroit",
+  "event_id": "btl-minnesota-2026",
+  "event_name": "BTL Body & Mind Experience — Minnesota",
   "event_tagline": "Harvard faculty, hands-on device demos, and a revenue plan tailored to your practice.",
   "hero_headline": "Grow Your Practice. We'll Show You How.",
   "hero_tagline": "Harvard faculty, hands-on device demos, and a revenue plan tailored to your practice.",
   "event_description": "A full-day clinical education event with Harvard faculty, hands-on device demos, a personalized revenue workshop, and an evening cocktail party with DJ.",
-  "date": "2026-03-21",
-  "time_start": "09:00",
+  "date": "2026-04-11",
+  "time_start": "08:00",
   "time_end": "22:00",
-  "timezone": "America/Detroit",
+  "timezone": "America/Chicago",
   "location": {
-    "venue": "Westin Book Cadillac",
-    "address": "1114 Washington Blvd",
-    "city": "Detroit",
-    "state": "MI",
-    "zip": "48226",
-    "maps_url": "https://maps.google.com/?q=Westin+Book+Cadillac+Detroit+MI"
+    "venue": "The Hotel Landing",
+    "address": "925 Lake St E",
+    "city": "Wayzata",
+    "state": "MN",
+    "zip": "55391",
+    "maps_url": "https://maps.google.com/?q=The+Hotel+Landing+925+Lake+St+E+Wayzata+MN"
   },
   "capacity": 75,
-  "registration_close_date": "2026-03-19",
+  "registration_close_date": "2026-04-09",
   "status": "active",
   "proxy_base_url": "",
-  "ga4_measurement_id": "G-JBED5M8NVG",
-  "base_url": "https://btlmichigan.com",
+  "ga4_measurement_id": "PLACEHOLDER_GA4_ID",
+  "facebook_pixel_id": "931627852657501",
+  "base_url": "https://btlminnesota.com",
 
   "demo_counts": {
     "capacity": 75,
-    "total": 47,
-    "chiro": 14,
-    "medspa": 3,
-    "derm": 5,
-    "plastic-surgery": 1,
-    "family-practice": 7,
-    "ortho": 4,
-    "cosmetic-dentist": 8,
-    "psychiatry": 5
+    "total": 0,
+    "chiro": 0,
+    "medspa": 0,
+    "derm": 0,
+    "plastic-surgery": 0,
+    "family-practice": 0,
+    "ortho": 0,
+    "cosmetic-dentist": 0,
+    "psychiatry": 0
   },
 
   "agenda": [
     {
-      "time": "9:00 AM",
+      "time": "8:00 AM",
       "title": "Doors Open & Breakfast",
       "description": "Coffee, catered breakfast, and hands-on product stations — no opening lecture, just walk the floor and try the devices"
     },
     {
-      "time": "9:45 AM",
+      "time": "8:45 AM",
       "title": "Key Opinion Leader Clinical Keynote",
       "description": "Harvard faculty presents published outcomes data and clinical best practices across the BTL platform portfolio"
     },
     {
-      "time": "10:30 AM",
+      "time": "9:30 AM",
       "title": "Specialty Breakout Sessions",
       "description": "Small-group sessions organized by specialty — live device demonstrations, physician Q&A, and clinical deep dives"
     },
     {
-      "time": "12:00 PM",
+      "time": "11:00 AM",
       "title": "Lunch & Device Playground",
       "description": "Catered lunch and open floor — try every device, talk to clinical specialists, get your questions answered one-on-one"
     },
     {
-      "time": "1:30 PM",
+      "time": "12:30 PM",
       "title": "Revenue & Launch Workshop",
       "description": "Pricing strategies, staff training models, and patient marketing playbooks from practices already running BTL devices"
     },
     {
-      "time": "2:30 PM",
+      "time": "1:30 PM",
       "title": "One-on-One ROI Modeling",
       "description": "A BTL revenue specialist builds a custom financial model for your practice — patient volume, pricing, break-even timeline"
     },
     {
-      "time": "3:30 PM",
+      "time": "2:30 PM",
       "title": "Free Time",
-      "description": "Break before the evening — explore Detroit, relax at the hotel, or continue conversations from the day"
+      "description": "Break before the evening — explore Wayzata and Lake Minnetonka, relax at the hotel, or continue conversations from the day"
     },
     {
       "time": "6:00 PM",
@@ -81,7 +82,7 @@
     {
       "time": "7:00 PM",
       "title": "Dinner & Party",
-      "description": "Sit-down dinner, live DJ, and dancing until midnight at the Westin Book Cadillac"
+      "description": "Sit-down dinner, live DJ, and dancing until midnight at The Hotel Landing"
     }
   ],
 
@@ -96,7 +97,7 @@
       "testimonial": {
         "quote": "We added Emsella six months ago. It's our highest-margin service and the patients are completely different from our adjustment patients. 80% are women who had never visited a chiropractor before.",
         "author": "Dr. Brian Kowalski",
-        "practice": "Great Lakes Chiropractic, Troy MI"
+        "practice": "North Star Chiropractic, Eden Prairie MN"
       },
       "talking_points": [
         "New revenue stream — no insurance billing headaches",
@@ -114,7 +115,7 @@
       "testimonial": {
         "quote": "Our clients were asking for body contouring by name. Adding the BTL line meant we could say yes to everything — face, body, skin — without juggling four different vendor relationships.",
         "author": "Dr. Natalie Voss",
-        "practice": "Birmingham Aesthetics & Wellness, Birmingham MI"
+        "practice": "Edina Aesthetics & Wellness, Edina MN"
       },
       "talking_points": [
         "Emface: 20-minute facial treatments, no needles, no downtime",
@@ -132,7 +133,7 @@
       "testimonial": {
         "quote": "My Botox and filler patients kept asking about skin tightening and body work. Exion and Emface let me offer those treatments in-house instead of sending patients down the street.",
         "author": "Dr. Karen Whitfield",
-        "practice": "Michigan Dermatology & Skin Center, Ann Arbor MI"
+        "practice": "Twin Cities Dermatology & Skin Center, Minneapolis MN"
       },
       "talking_points": [
         "Exion Clear RF: smart microablation for skin resurfacing",
@@ -150,7 +151,7 @@
       "testimonial": {
         "quote": "Emsculpt Neo fills the gap between consultation and procedure. Patients who aren't ready for lipo get real results — and 30% of them book surgery within a year.",
         "author": "Dr. Steven Radford",
-        "practice": "Bloomfield Plastic Surgery, Bloomfield Hills MI"
+        "practice": "Wayzata Plastic Surgery, Wayzata MN"
       },
       "talking_points": [
         "Emsculpt Neo: 25% muscle growth + 30% fat reduction, no anesthesia",
@@ -168,7 +169,7 @@
       "testimonial": {
         "quote": "My nurses run the Emsella treatments between patient visits. We added it as a wellness service — no insurance coding required. It paid for itself in four months.",
         "author": "Dr. Michelle Pryor",
-        "practice": "Lakeside Family Medicine, Grosse Pointe MI"
+        "practice": "Lake Minnetonka Family Medicine, Minnetonka MN"
       },
       "talking_points": [
         "Emsella: patients stay fully clothed, 30-minute sessions, zero downtime",
@@ -186,7 +187,7 @@
       "testimonial": {
         "quote": "Post-knee replacement patients who did Emsculpt Neo recovered measurably faster. We tracked quad strength at 6 weeks — the treatment group was 35% ahead of controls.",
         "author": "Dr. Mark Jankowski",
-        "practice": "Michigan Orthopedic & Sports Medicine, Royal Oak MI"
+        "practice": "Minnesota Orthopedic & Sports Medicine, Plymouth MN"
       },
       "talking_points": [
         "Emvital: targeted pain relief and mobility improvement for joints and spine",
@@ -204,7 +205,7 @@
       "testimonial": {
         "quote": "Half my TMJ patients had tried everything — night guards, Botox, physical therapy. Emface gave them measurable relief, and they started referring friends for the aesthetic treatments.",
         "author": "Dr. Jennifer Haddad",
-        "practice": "Rochester Hills Cosmetic Dentistry, Rochester Hills MI"
+        "practice": "Minnetonka Cosmetic Dentistry, Minnetonka MN"
       },
       "talking_points": [
         "FDA-cleared for TMJ dysfunction — treats the condition your patients already have",
@@ -222,7 +223,7 @@
       "testimonial": {
         "quote": "For patients who've failed two or more medications, EXOMIND is the first thing that's worked. Six sessions in, I see changes in affect and engagement that medication adjustments never achieved.",
         "author": "Dr. Aaron Greenberg",
-        "practice": "Michigan Psychiatric Associates, Southfield MI"
+        "practice": "Minnesota Psychiatric Associates, Minneapolis MN"
       },
       "talking_points": [
         "FDA-cleared for Major Depressive Disorder in adults",
@@ -313,7 +314,7 @@
     },
     {
       "question": "What about parking and hotel accommodations?",
-      "answer": "The Westin Book Cadillac has valet and self-parking available. If you're coming from outside metro Detroit and want to stay overnight, we've arranged a room block at the Westin — details will be in your confirmation email after registration."
+      "answer": "The Hotel Landing has on-site parking available. If you're coming from outside the Twin Cities and want to stay overnight, the hotel is located on Lake Minnetonka — details on accommodations will be in your confirmation email after registration."
     },
     {
       "question": "Can I bring my office manager or a colleague?",
