@@ -25,7 +25,6 @@
           fillField('last_name', data.last);
           fillField('email', data.email);
           fillField('practice', data.practice);
-          fillField('phone', data.phone);
           if (data.specialty) fillField('specialty', data.specialty);
           setTimeout(() => document.getElementById('register')?.scrollIntoView({behavior:'smooth'}), 500);
         }
